@@ -4,6 +4,12 @@ import {
   IoFlash,
   IoBarChart,
   IoShieldCheckmark,
+  IoApps,
+  IoDocumentText,
+  IoRibbon,
+  IoChatbubbles,
+  IoExtensionPuzzle,
+  IoSparkles,
 } from "react-icons/io5";
 
 const APP_URL = "https://hired-log.vercel.app";
@@ -34,8 +40,8 @@ export default function Home() {
           <Logo />
           <div className={styles.navLinks}>
             <a href="#features">Features</a>
+            <a href="#ai-tools">AI Tools</a>
             <a href="#how-it-works">How it works</a>
-            <a href="#about">About</a>
           </div>
           <div className={styles.navCtas}>
             <a href={APP_URL} className={styles.navLogin}>Login</a>
@@ -51,10 +57,10 @@ export default function Home() {
         <div className={styles.heroLeft}>
           <div className={styles.badge}>✦ Free to use · No credit card needed</div>
           <h1 className={styles.heroH1}>
-            Your job hunt.<br />Documented.
+            Track. Analyze.<br />Land the job.
           </h1>
           <p className={styles.heroSub}>
-            Stop losing track of where you applied. hired.log keeps every application, status, and note in one clean dashboard — so you can focus on landing the job.
+            More than a tracker — hired.log is your AI-powered job hunt command center. Track applications, visualize your pipeline, generate cover letters, match resumes, and prep for interviews. All in one place.
           </p>
           <div className={styles.heroCtas}>
             <a href={APP_URL} className={styles.btnFilled}>Start tracking free →</a>
@@ -109,32 +115,99 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURES */}
+      {/* CORE FEATURES */}
       <section className={styles.section} id="features">
         <div className={styles.sectionInner}>
-          <div className={styles.sectionLabel}>Features</div>
-          <h2 className={styles.sectionH2}>Everything you need.<br />Nothing you don&apos;t.</h2>
-          <p className={styles.sectionSub}>A focused tool built for one job: helping you get a job.</p>
+          <div className={styles.sectionLabel}>Core Features</div>
+          <h2 className={styles.sectionH2}>Everything you need to manage your job hunt.</h2>
+          <p className={styles.sectionSub}>A focused toolkit — track, visualize, analyze, and stay organized.</p>
           <div className={styles.featuresGrid}>
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}><IoBriefcase /></div>
-              <h3>Track Every Application</h3>
-              <p>Log the company, role, date, and status. Know exactly where every application stands at a glance.</p>
+              <h3>Application Tracking</h3>
+              <p>Log the company, role, date, salary, contacts, and status. Know exactly where every application stands at a glance.</p>
             </div>
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon}><IoFlash /></div>
-              <h3>AI-Powered Extraction</h3>
-              <p>Paste a job description and let AI pull the details for you. Less typing, more applying.</p>
+              <div className={styles.featureIcon}><IoApps /></div>
+              <h3>Kanban Board</h3>
+              <p>Drag and drop applications between stages. See your entire pipeline laid out visually — from applied to offer.</p>
             </div>
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}><IoBarChart /></div>
-              <h3>Dashboard Insights</h3>
-              <p>See your pipeline at a glance — total applied, active, interviews, offers, and rejection rate.</p>
+              <h3>Analytics & Insights</h3>
+              <p>Response rates, interview rates, weekly trends, application funnel, work mode distribution, and more.</p>
+            </div>
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}><IoExtensionPuzzle /></div>
+              <h3>Chrome Extension</h3>
+              <p>Save jobs directly from LinkedIn, Indeed, and Kalibrr with one click. No copy-pasting needed.</p>
             </div>
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}><IoShieldCheckmark /></div>
               <h3>Private & Secure</h3>
-              <p>Your data lives in your account, not spreadsheets. Authenticated and secured.</p>
+              <p>Your data lives in your account, not spreadsheets. Authenticated, encrypted, and yours alone.</p>
+            </div>
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}><IoFlash /></div>
+              <h3>Smart & Fast</h3>
+              <p>Search, filter, sort by any field. Dark and light themes. Mobile-responsive. Built for speed.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI TOOLS */}
+      <section className={styles.sectionAlt} id="ai-tools">
+        <div className={styles.sectionInner}>
+          <div className={styles.sectionLabel}>
+            <IoSparkles style={{ fontSize: "0.7rem" }} /> AI-Powered Tools
+          </div>
+          <h2 className={styles.sectionH2}>Your AI career assistant, built in.</h2>
+          <p className={styles.sectionSub}>Powered by Gemini — extraction, generation, analysis, and coaching in every feature.</p>
+
+          <div className={styles.aiGrid}>
+            <div className={styles.aiCard}>
+              <div className={styles.aiCardIcon} style={{ background: "rgba(99, 102, 241, 0.12)", color: "#818cf8" }}>
+                <IoFlash />
+              </div>
+              <div className={styles.aiCardContent}>
+                <h3>AI Auto-Fill</h3>
+                <p>Paste a job description or screenshot — AI extracts company, role, location, salary, and more. Less typing, more applying.</p>
+              </div>
+              <div className={styles.aiCardTag}>Text + Image</div>
+            </div>
+
+            <div className={styles.aiCard}>
+              <div className={styles.aiCardIcon} style={{ background: "rgba(139, 92, 246, 0.12)", color: "#a78bfa" }}>
+                <IoDocumentText />
+              </div>
+              <div className={styles.aiCardContent}>
+                <h3>AI Cover Letters</h3>
+                <p>Generate tailored cover letters for any application. Select a job, add your background, and get a polished letter instantly.</p>
+              </div>
+              <div className={styles.aiCardTag}>One-click</div>
+            </div>
+
+            <div className={styles.aiCard}>
+              <div className={styles.aiCardIcon} style={{ background: "rgba(16, 185, 129, 0.12)", color: "#34d399" }}>
+                <IoRibbon />
+              </div>
+              <div className={styles.aiCardContent}>
+                <h3>Resume Match Score</h3>
+                <p>Paste your resume and a job description — get a match percentage, matched and missing skills, strengths, and actionable suggestions.</p>
+              </div>
+              <div className={styles.aiCardTag}>ATS analysis</div>
+            </div>
+
+            <div className={styles.aiCard}>
+              <div className={styles.aiCardIcon} style={{ background: "rgba(59, 130, 246, 0.12)", color: "#60a5fa" }}>
+                <IoChatbubbles />
+              </div>
+              <div className={styles.aiCardContent}>
+                <h3>AI Interview Prep</h3>
+                <p>Practice with AI-generated questions tailored to your role — behavioral, technical, and situational. Get rated with feedback on every answer.</p>
+              </div>
+              <div className={styles.aiCardTag}>8 questions per session</div>
             </div>
           </div>
         </div>
@@ -144,7 +217,7 @@ export default function Home() {
       <section className={styles.section} id="how-it-works">
         <div className={styles.sectionInner}>
           <div className={styles.sectionLabel}>How it works</div>
-          <h2 className={styles.sectionH2}>Three steps to a cleaner job hunt.</h2>
+          <h2 className={styles.sectionH2}>Three steps to a smarter job hunt.</h2>
           <div className={styles.stepsRow}>
             <div className={styles.step}>
               <div className={styles.stepNum}>01</div>
@@ -155,13 +228,13 @@ export default function Home() {
             <div className={styles.step}>
               <div className={styles.stepNum}>02</div>
               <h3 className={styles.stepTitle}>Log your applications</h3>
-              <p className={styles.stepDesc}>Add companies, roles, and statuses. Use AI to auto-fill from job postings.</p>
+              <p className={styles.stepDesc}>Add manually, use AI auto-fill, or save directly from job boards with our Chrome extension.</p>
             </div>
             <div className={styles.stepDivider} />
             <div className={styles.step}>
               <div className={styles.stepNum}>03</div>
-              <h3 className={styles.stepTitle}>Track your progress</h3>
-              <p className={styles.stepDesc}>Watch your pipeline. Follow up smarter. Land that offer.</p>
+              <h3 className={styles.stepTitle}>Level up your search</h3>
+              <p className={styles.stepDesc}>Track your pipeline, analyze trends, generate cover letters, match your resume, and ace your interviews.</p>
             </div>
           </div>
         </div>
@@ -170,8 +243,8 @@ export default function Home() {
       {/* CTA */}
       <section className={styles.ctaSection} id="about">
         <div className={styles.ctaInner}>
-          <h2 className={styles.ctaH2}>Ready to get organized?</h2>
-          <p className={styles.ctaSub}>hired.log is free. Start logging your applications today.</p>
+          <h2 className={styles.ctaH2}>Ready to land that offer?</h2>
+          <p className={styles.ctaSub}>hired.log is free — tracking, analytics, AI tools, and all. Start now.</p>
           <a href={APP_URL} className={styles.btnFilledLg}>Get started — it&apos;s free →</a>
         </div>
       </section>

@@ -389,7 +389,7 @@
 /* ─── Features Grid ──────────────────────────────── */
 .featuresGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -429,6 +429,79 @@
   font-size: 0.875rem;
   color: var(--text-secondary);
   line-height: 1.65;
+}
+
+/* ─── AI Section (alt background) ────────────────── */
+.sectionAlt {
+  padding: 96px 32px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.aiGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.aiCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: var(--bg-card-2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 28px;
+  transition: border-color 200ms ease;
+  position: relative;
+}
+
+.aiCard:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.aiCardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.aiCardContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.aiCardContent h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.aiCardContent p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.aiCardTag {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-hover);
+  background: var(--accent-muted);
+  padding: 3px 10px;
+  border-radius: 999px;
 }
 
 /* ─── How It Works ───────────────────────────────── */
@@ -538,6 +611,10 @@
   .heroRight {
     flex: 0 0 360px;
   }
+
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -596,6 +673,22 @@
 
   .section {
     padding: 64px 24px;
+  }
+
+  .sectionAlt {
+    padding: 64px 24px;
+  }
+
+  .aiCard {
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+  }
+
+  .aiCardTag {
+    position: static;
+    align-self: flex-start;
+    margin-top: 4px;
   }
 
   .ctaSection {
