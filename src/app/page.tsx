@@ -6,7 +6,7 @@ import {
   IoShieldCheckmark,
 } from "react-icons/io5";
 
-const APP_URL = "https://job-tracker-one-mocha.vercel.app";
+const APP_URL = "https://hired-log.vercel.app";
 
 const Logo = () => (
   <div className={styles.logoMark}>
