@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# hired.log — Landing Page
+
+Marketing site for [hired.log](https://hired-log.vercel.app), an AI-powered job application tracker.
+
+**Live site:** [hired-log-landing.vercel.app](https://hired-log-landing.vercel.app) *(update with your actual URL)*
+
+---
+
+## Pages & Sections
+
+| Section | Anchor | Description |
+|---|---|---|
+| **Nav** | — | Sticky top nav with logo, links to Features, AI Tools, How it works; Login + Get Started CTA |
+| **Hero** | — | Headline, subtext, two CTAs, mock app card showing dashboard stats |
+| **Core Features** | `#features` | 6-card grid showcasing tracking, Kanban, analytics, extension, security, speed |
+| **AI-Powered Tools** | `#ai-tools` | 4 horizontal cards for AI Auto-Fill, Cover Letters, Resume Match, Interview Prep |
+| **How it Works** | `#how-it-works` | 3-step process: sign up → log applications → level up search |
+| **CTA** | `#about` | Final call to action to sign up free |
+| **Footer** | — | Logo + "Made by KC" credit |
+
+---
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css         # Global reset, CSS variables (colors, fonts)
+│   ├── layout.tsx          # HTML shell, metadata, Open Graph, SEO
+│   └── page.tsx            # All page content (single-page static site)
+│
+└── (no components directory — everything lives in page.tsx)
+
+page.module.css             # All styles — layout, nav, hero, sections, cards, responsive
+```
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styles | CSS Modules (plain CSS, no preprocessor) |
+| Icons | react-icons (Ionicons set) |
+| Deployment | Vercel (static export) |
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+```bash
+npm install -g vercel
+vercel
+```
 
-To learn more about Next.js, take a look at the following resources:
+No environment variables required — this is a fully static marketing page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Linked App Repo
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The main app: [`hired-log`](../hired-log) — Next.js + Firebase + Gemini AI.

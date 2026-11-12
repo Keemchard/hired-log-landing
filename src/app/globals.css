@@ -7,20 +7,20 @@
 }
 
 :root {
-  --bg: #0b0d14;
-  --bg-card: #13161f;
-  --bg-card-2: #1a1d27;
-  --border: #242836;
-  --border-light: #2e3348;
-  --text-primary: #e8eaf0;
-  --text-secondary: #9ca3b4;
-  --text-muted: #6b7280;
-  --accent: #6366f1;
-  --accent-hover: #818cf8;
-  --accent-muted: rgba(99, 102, 241, 0.12);
-  --success: #10b981;
-  --warning: #f59e0b;
-  --info: #3b82f6;
+  --bg: #111113;
+  --bg-card: #18181b;
+  --bg-card-2: #232327;
+  --border: #2e2e35;
+  --border-light: #3c3c46;
+  --text-primary: #ededef;
+  --text-secondary: #9898a8;
+  --text-muted: #636372;
+  --accent: #2563eb;
+  --accent-hover: #3b82f6;
+  --accent-muted: rgba(37, 99, 235, 0.12);
+  --success: #4cc38a;
+  --warning: #d97706;
+  --info: #0ea5e9;
 }
 
 html {
